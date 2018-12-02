@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <UserSecretsId>aspnet-FitnessGuru.Web-1AD085E1-0210-4BCE-BAFB-A85912A0B4A9</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.6" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FitnessGuru.Data\FitnessGuru.Data.csproj" />
+    <ProjectReference Include="..\FitnessGuru.Models\FitnessGuru.Models.csproj" />
+  </ItemGroup>
+
+</Project>
