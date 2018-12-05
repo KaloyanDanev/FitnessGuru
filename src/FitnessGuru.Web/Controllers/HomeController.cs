@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using System.Linq;
-using System.Threading.Tasks;
+using FitnessGuru.Data.Common;
+using FitnessGuru.Models.Articles;
 using Microsoft.AspNetCore.Mvc;
 using FitnessGuru.Web.Models;
 
@@ -10,28 +9,27 @@ namespace FitnessGuru.Web.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly IRepository<Article> articleRepository;
+
+        public HomeController(IRepository<Article> articleRepository)
+        {
+            this.articleRepository = articleRepository;
+        }
+
         public IActionResult Index()
         {
-            return View();
-        }
+            var articles = this.articleRepository.All().Select(x => new ArticleViewModel
+            {
+                Content = x.Content,
+                CategoryName = x.Category.Name
+            });
 
-        public IActionResult About()
-        {
-            ViewData["Message"] = "Your application description page.";
+            var viewModel = new IndexViewModel
+            {
+                Articles = articles
+            };
 
-            return View();
-        }
-
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
-
-            return View();
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
+            return this.View(viewModel);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

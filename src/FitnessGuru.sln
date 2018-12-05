@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FitnessGuru.Data", "Fitness
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FitnessGuru.Models", "FitnessGuru.Models\FitnessGuru.Models.csproj", "{2B6FE3FA-68A0-4A2F-A10C-2B98EA11E1AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sandbox", "Sandbox\Sandbox.csproj", "{EC29E21B-E6CB-4E51-8F64-01ECD9CA8949}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sandbox", "Sandbox\Sandbox.csproj", "{EC29E21B-E6CB-4E51-8F64-01ECD9CA8949}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{BE6F05F3-1D93-41BA-9293-CBA548F840A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitnessGuru.Data.Common", "FitnessGuru.Data.Common\FitnessGuru.Data.Common.csproj", "{130D3976-26AF-4BED-88D3-B057D42450F0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +37,10 @@ Global
 		{EC29E21B-E6CB-4E51-8F64-01ECD9CA8949}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC29E21B-E6CB-4E51-8F64-01ECD9CA8949}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC29E21B-E6CB-4E51-8F64-01ECD9CA8949}.Release|Any CPU.Build.0 = Release|Any CPU
+		{130D3976-26AF-4BED-88D3-B057D42450F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{130D3976-26AF-4BED-88D3-B057D42450F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{130D3976-26AF-4BED-88D3-B057D42450F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{130D3976-26AF-4BED-88D3-B057D42450F0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

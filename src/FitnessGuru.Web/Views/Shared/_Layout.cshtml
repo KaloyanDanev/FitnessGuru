@@ -39,9 +39,20 @@
                             <li><a asp-area="" asp-controller="Workouts" asp-action="Workouts">Workouts</a></li>
                             <li><a asp-area="" asp-controller="Nutrition" asp-action="Nutrition">Nutrition</a></li>
                             <li><a asp-area="" asp-controller="Women" asp-action="Women">For Women</a></li>
+                            <li><a asp-area="" asp-controller="Topics" asp-action="Topics">Other Topics</a></li>
                         </ul>
                     </li>
-                    <li><a asp-area="" asp-controller="Store" asp-action="Store">Store</a></li>
+                    <li class="dropdown">
+                        <a a asp-area="" asp-controller="Store" asp-action="Store" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Store <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a asp-area="" asp-controller="Protein" asp-action="Protein">Protein</a></li>
+                            <li><a asp-area="" asp-controller="Creatine" asp-action="Creatine">Creatine</a></li>
+                            <li><a asp-area="" asp-controller="Pre-Workout" asp-action="Pre-Workout">Pre-Workout</a></li>
+                            <li><a asp-area="" asp-controller="BCAA" asp-action="BCAA">BCAAs</a></li>
+                            <li><a asp-area="" asp-controller="FatBurners" asp-action="FatBurners">Fat Burners</a></li>
+                            <li><a asp-area="" asp-controller="ShakerBottles" asp-action="ShakerBottles">Shaker Bottles</a></li>
+                        </ul>
+                    </li>
                     <li><a asp-area="" asp-controller="Forum" asp-action="Forum">Forum</a></li>
                 </ul>
                 <form class="navbar-form navbar-left" role="search">

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using FitnessGuru.Data;
+using FitnessGuru.Data.Common;
 using FitnessGuru.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
@@ -44,6 +45,9 @@ namespace FitnessGuru.Web
                 .AddEntityFrameworkStores<FitnessGuruWebContext>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddScoped(typeof(IRepository<>), typeof(DbRepository<>));
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
