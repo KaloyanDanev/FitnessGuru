@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using FitnessGuru.Data;
 using FitnessGuru.Data.Common;
 using FitnessGuru.Models;
+using FitnessGuru.Services.DataServices;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Hosting;
@@ -47,6 +48,7 @@ namespace FitnessGuru.Web
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             services.AddScoped(typeof(IRepository<>), typeof(DbRepository<>));
+            services.AddScoped<IArticlesService, ArticlesService>();
 
         }
 

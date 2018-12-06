@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FitnessGuru.Data.Common\FitnessGuru.Data.Common.csproj" />
+    <ProjectReference Include="..\FitnessGuru.Models\FitnessGuru.Models.csproj" />
+    <ProjectReference Include="..\FitnessGuru.Services.Models\FitnessGuru.Services.Models.csproj" />
+  </ItemGroup>
+
+</Project>

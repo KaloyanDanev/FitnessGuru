@@ -2,6 +2,8 @@
 using System.Linq;
 using FitnessGuru.Data.Common;
 using FitnessGuru.Models.Articles;
+using FitnessGuru.Services.DataServices;
+using FitnessGuru.Services.Models.Home;
 using Microsoft.AspNetCore.Mvc;
 using FitnessGuru.Web.Models;
 
@@ -9,20 +11,16 @@ namespace FitnessGuru.Web.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly IRepository<Article> articleRepository;
+        private readonly IArticlesService articlesService;
 
-        public HomeController(IRepository<Article> articleRepository)
+        public HomeController(IArticlesService articlesService)
         {
-            this.articleRepository = articleRepository;
+            this.articlesService = articlesService;
         }
 
         public IActionResult Index()
         {
-            var articles = this.articleRepository.All().Select(x => new ArticleViewModel
-            {
-                Content = x.Content,
-                CategoryName = x.Category.Name
-            });
+            var articles = this.articlesService.GetArticles(9);
 
             var viewModel = new IndexViewModel
             {

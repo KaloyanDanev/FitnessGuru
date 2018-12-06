@@ -14,6 +14,8 @@
   <ItemGroup>
     <ProjectReference Include="..\FitnessGuru.Data\FitnessGuru.Data.csproj" />
     <ProjectReference Include="..\FitnessGuru.Models\FitnessGuru.Models.csproj" />
+    <ProjectReference Include="..\FitnessGuru.Services.Models\FitnessGuru.Services.Models.csproj" />
+    <ProjectReference Include="..\FitnessGuru.Services\FitnessGuru.Services.DataServices.csproj" />
   </ItemGroup>
 
 </Project>

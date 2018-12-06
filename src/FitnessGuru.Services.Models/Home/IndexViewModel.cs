@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace FitnessGuru.Web.Models
+namespace FitnessGuru.Services.Models.Home
 {
     public class IndexViewModel
     {

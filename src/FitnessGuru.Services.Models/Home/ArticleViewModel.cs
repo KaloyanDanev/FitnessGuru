@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace FitnessGuru.Web.Models
+﻿namespace FitnessGuru.Services.Models.Home
 {
     public class ArticleViewModel
     {
