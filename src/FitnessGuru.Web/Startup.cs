@@ -13,7 +13,6 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using FitnessGuru.Web.Models;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -49,6 +48,7 @@ namespace FitnessGuru.Web
 
             services.AddScoped(typeof(IRepository<>), typeof(DbRepository<>));
             services.AddScoped<IArticlesService, ArticlesService>();
+            services.AddScoped<ICategoriesService, CategoriesService>();
 
         }
 

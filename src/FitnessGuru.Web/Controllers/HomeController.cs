@@ -1,15 +1,12 @@
 ﻿using System.Diagnostics;
-using System.Linq;
-using FitnessGuru.Data.Common;
-using FitnessGuru.Models.Articles;
 using FitnessGuru.Services.DataServices;
+using FitnessGuru.Services.Models;
 using FitnessGuru.Services.Models.Home;
 using Microsoft.AspNetCore.Mvc;
-using FitnessGuru.Web.Models;
 
 namespace FitnessGuru.Web.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
         private readonly IArticlesService articlesService;
 

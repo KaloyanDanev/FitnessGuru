@@ -1,6 +1,4 @@
-using System;
-
-namespace FitnessGuru.Web.Models
+namespace FitnessGuru.Services.Models
 {
     public class ErrorViewModel
     {
