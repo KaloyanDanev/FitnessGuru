@@ -8,7 +8,9 @@
     {
         <div class="col-md-4">
             <div class="panel panel-default">
-                <div class="panel-heading">@article.CategoryName</div>
+                <div class="panel-heading">@article.CategoryName
+                    <a class="btn btn-default btn-sm" asp-controller="Articles" asp-action="Details" asp-route-id="@article.Id">View</a>
+                    </div>
                 <div class="panel-body">
                     @article.Content
                 </div>

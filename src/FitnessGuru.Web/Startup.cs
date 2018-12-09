@@ -6,6 +6,9 @@ using FitnessGuru.Data;
 using FitnessGuru.Data.Common;
 using FitnessGuru.Models;
 using FitnessGuru.Services.DataServices;
+using FitnessGuru.Services.Mapping;
+using FitnessGuru.Services.Models.Home;
+using FitnessGuru.Web.Model.Article;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Hosting;
@@ -30,6 +33,10 @@ namespace FitnessGuru.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            AutoMapperConfig.RegisterMappings(
+                typeof(IndexViewModel).Assembly,
+                typeof(CreateArticleInputModel).Assembly);
+
             services.Configure<CookiePolicyOptions>(options =>
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.

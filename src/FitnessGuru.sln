@@ -25,7 +25,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{6CFB671E-1
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{16E0E8E2-0E53-4581-A4E0-6F8E1E53FA99}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitnessGuru.Services.Models", "FitnessGuru.Services.Models\FitnessGuru.Services.Models.csproj", "{0EA8B15A-8698-4824-9B67-B50F1A3FA197}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FitnessGuru.Services.Models", "FitnessGuru.Services.Models\FitnessGuru.Services.Models.csproj", "{0EA8B15A-8698-4824-9B67-B50F1A3FA197}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitnessGuru.Services.Mapping", "FitnessGuru.Services.Mapping\FitnessGuru.Services.Mapping.csproj", "{CB921305-5B72-48D9-818A-9BA0FD2201EE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,6 +63,10 @@ Global
 		{0EA8B15A-8698-4824-9B67-B50F1A3FA197}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0EA8B15A-8698-4824-9B67-B50F1A3FA197}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0EA8B15A-8698-4824-9B67-B50F1A3FA197}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB921305-5B72-48D9-818A-9BA0FD2201EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB921305-5B72-48D9-818A-9BA0FD2201EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB921305-5B72-48D9-818A-9BA0FD2201EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB921305-5B72-48D9-818A-9BA0FD2201EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -73,6 +79,7 @@ Global
 		{130D3976-26AF-4BED-88D3-B057D42450F0} = {6CFB671E-1979-4B97-897A-7F42E5C1CF98}
 		{4AF92A42-FD0A-4561-A730-9CEDDDF9E13C} = {81D187D0-5EE8-4B5F-885D-FA3C510923D3}
 		{0EA8B15A-8698-4824-9B67-B50F1A3FA197} = {81D187D0-5EE8-4B5F-885D-FA3C510923D3}
+		{CB921305-5B72-48D9-818A-9BA0FD2201EE} = {81D187D0-5EE8-4B5F-885D-FA3C510923D3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2AFE50AE-6605-4232-B254-95DB05D35526}

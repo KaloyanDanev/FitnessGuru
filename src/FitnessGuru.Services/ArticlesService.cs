@@ -1,8 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using FitnessGuru.Data.Common;
 using FitnessGuru.Models.Articles;
+using FitnessGuru.Services.Mapping;
 using FitnessGuru.Services.Models.Categories;
 using FitnessGuru.Services.Models.Home;
 
@@ -25,11 +27,8 @@ namespace FitnessGuru.Services.DataServices
         public IEnumerable<ArticleViewModel> GetArticles(int count)
         {
             var articles = this.articlesRepository.All()
-                .Select(x => new ArticleViewModel
-                {
-                    Content = x.Content,
-                    CategoryName = x.Category.Name
-                }).ToList();
+                .OrderBy(x => Guid.NewGuid())
+                .To<ArticleViewModel>().Take(count).ToList();
 
             return articles;
         }
@@ -53,14 +52,11 @@ namespace FitnessGuru.Services.DataServices
             return article.Id;
         }
 
-        public ArticleDetailsViewModel GetArticleById(int id)
+        public TViewModel GetArticleById<TViewModel>(int id)
         {
             var article = this.articlesRepository.All().Where(x => x.Id == id)
-                .Select(x => new ArticleDetailsViewModel
-                {
-                    Content = x.Content,
-                    CategoryName = x.Category.Name
-                }).FirstOrDefault();
+                .To<TViewModel>()
+                .FirstOrDefault();
 
             return article;
         }

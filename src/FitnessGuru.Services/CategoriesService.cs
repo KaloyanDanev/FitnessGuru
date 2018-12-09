@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using FitnessGuru.Data.Common;
 using FitnessGuru.Models.Articles;
+using FitnessGuru.Services.Mapping;
 using FitnessGuru.Services.Models;
+using FitnessGuru.Services.Models.Categories;
 
 namespace FitnessGuru.Services.DataServices
 {
@@ -16,10 +18,10 @@ namespace FitnessGuru.Services.DataServices
             this.categoriesRepository = categoriesRepository;
         }
 
-        public IEnumerable<IdAndNameViewModel> GetAll()
+        public IEnumerable<CategoryIdAndNameViewModel> GetAll()
         {
             var categories = this.categoriesRepository.All().OrderBy(x => x.Name)
-                .Select(x => new IdAndNameViewModel { Id = x.Id, Name = x.Name }).ToList();
+                .To<CategoryIdAndNameViewModel>().ToList();
 
             return categories;
         }

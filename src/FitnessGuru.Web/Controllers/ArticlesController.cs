@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Threading.Tasks;
 using FitnessGuru.Services.DataServices;
+using FitnessGuru.Services.Models.Categories;
 using FitnessGuru.Web.Model.Article;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -26,7 +27,7 @@ namespace FitnessGuru.Web.Controllers
             this.ViewData["Categories"] = this.categoriesService.GetAll().Select(x => new SelectListItem
             {
                 Value = x.Id.ToString(),
-                Text = x.Name
+                Text = x.NameCount
             });
             return this.View();
         }
@@ -44,7 +45,7 @@ namespace FitnessGuru.Web.Controllers
 
         public IActionResult Details(int id)
         {
-            var article = this.articlesService.GetArticleById(id);
+            var article = this.articlesService.GetArticleById<ArticleDetailsViewModel>(id);
             return this.View(article);
         }
     }
