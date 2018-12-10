@@ -1,23 +1,26 @@
 ﻿@model FitnessGuru.Services.Models.Categories.ArticleDetailsViewModel
-
 @{
     ViewData["Title"] = "Details";
 }
-
 <h2>Details</h2>
-
 <div>
     <h4>ArticleDetailsViewModel</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Content)
+            @Html.DisplayNameFor(model => model.Title) :
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Content)
+            @Html.DisplayFor(model => model.Title)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.CategoryName)
+            @Html.DisplayNameFor(model => model.Content) :
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Content)<br/>
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CategoryName) :
         </dt>
         <dd>
             @Html.DisplayFor(model => model.CategoryName)

@@ -2,19 +2,21 @@
 @{
     ViewData["Title"] = "Home Page";
 }
-<br/>
+<br />
 <div class="row">
     @foreach (var article in Model.Articles)
     {
         <div class="col-md-4">
             <div class="panel panel-default">
-                <div class="panel-heading">@article.CategoryName
-                    <a class="btn btn-default btn-sm" asp-controller="Articles" asp-action="Details" asp-route-id="@article.Id">View</a>
-                    </div>
+                <div class="panel-heading"><h4>@article.Title</h4></div>
                 <div class="panel-body">
-                    @article.Content
+                    @Html.Raw(article.HtmlContent)
+                </div>
+                <div class="panel-heading">
+                    @article.CategoryName
+                    <a class="btn btn-default btn-sm" asp-controller="Articles" asp-action="Details" asp-route-id="@article.Id">View</a>
                 </div>
             </div>
-        </div>
-    }
+    </div>
+}
 </div>

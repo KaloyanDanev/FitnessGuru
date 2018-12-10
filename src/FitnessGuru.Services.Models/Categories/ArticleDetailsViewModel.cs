@@ -8,6 +8,8 @@ namespace FitnessGuru.Services.Models.Categories
 {
    public class ArticleDetailsViewModel : IMapFrom<Article>
     {
+        public string Title { get; set; }
+
         public string Content { get; set; }
 
         public string CategoryName { get; set; }

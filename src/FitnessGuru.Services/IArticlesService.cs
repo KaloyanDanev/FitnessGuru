@@ -11,7 +11,7 @@ namespace FitnessGuru.Services.DataServices
 
         int GetCount();
 
-        Task<int> Create(int categoryId,string content);
+        Task<int> Create(int categoryId,string content, string title);
 
         TViewModel GetArticleById<TViewModel>(int id);
     }

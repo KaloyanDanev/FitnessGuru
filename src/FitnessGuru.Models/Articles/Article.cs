@@ -4,6 +4,8 @@ namespace FitnessGuru.Models.Articles
 {
     public class Article : BaseModel<int>
     {
+        public string Title { get; set; }
+
         public string Content { get; set; }
 
         public int CategoryId { get; set; }
