@@ -27,7 +27,7 @@ namespace FitnessGuru.Services.DataServices
         public IEnumerable<ArticleViewModel> GetArticles(int count)
         {
             var articles = this.articlesRepository.All()
-                .OrderBy(x => Guid.NewGuid())
+                .OrderByDescending(x => x.Id)
                 .To<ArticleViewModel>().Take(count).ToList();
 
             return articles;
@@ -61,5 +61,11 @@ namespace FitnessGuru.Services.DataServices
 
             return article;
         }
+
+        public IEnumerable<ArticleSimpleViewModel> GetAllByCategory(int categoryId)
+            => this.articlesRepository
+                .All()
+                .Where(j => j.CategoryId == categoryId)
+                .To<ArticleSimpleViewModel>();
     }
 }

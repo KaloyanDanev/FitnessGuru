@@ -1,10 +1,15 @@
 ﻿using System;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
+using AutoMapper;
+using FitnessGuru.Models.Articles;
 using FitnessGuru.Services.DataServices;
 using FitnessGuru.Services.Models.Categories;
 using FitnessGuru.Web.Model.Article;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity.UI.Pages.Internal.Account;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
@@ -39,7 +44,7 @@ namespace FitnessGuru.Web.Controllers
             {
                 return this.View(input);
             }
-            var id = await this.articlesService.Create(input.CategoryId,input.Content,input.Title);
+            var id = await this.articlesService.Create(input.CategoryId, input.Content, input.Title);
             return RedirectToAction("Details", new { id = id });
         }
 
@@ -47,6 +52,6 @@ namespace FitnessGuru.Web.Controllers
         {
             var article = this.articlesService.GetArticleById<ArticleDetailsViewModel>(id);
             return this.View(article);
-        }
+        }     
     }
 }

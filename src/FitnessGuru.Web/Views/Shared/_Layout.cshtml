@@ -27,7 +27,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-left" href="/">
-                    <img src="/images/FitnessGuru.jpg" width="90px" class="img-rounded" />
+                    <img src="/images/FitnessGuru.jpg" width="90" class="img-rounded" />
                 </a>             
             </div>
             <div class="navbar-collapse collapse">
@@ -58,6 +58,8 @@
                     { 
                         <li><a asp-area="" asp-controller="Articles" asp-action="Create">Create</a></li>
                     }
+                    <li><a asp-area="" asp-controller="Categories" asp-action="Index">Categories</a></li>
+                    <li><a asp-controller="Categories" asp-action="Index" asp-area="Administration">Administration</a></li>
                 </ul>
                 <form class="navbar-form navbar-left" role="search">
                     <div class="form-group">
@@ -77,7 +79,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <strong> <p>&copy; 2018 - FitnessGuru</p></strong>
+            <strong>&copy; 2018 - FitnessGuru</strong>
         </footer>
     </div>
 

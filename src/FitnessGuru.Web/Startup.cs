@@ -18,6 +18,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using AutoMapper;
+using FitnessGuru.Models.Articles;
 
 namespace FitnessGuru.Web
 {
@@ -52,6 +54,8 @@ namespace FitnessGuru.Web
                 .AddEntityFrameworkStores<FitnessGuruWebContext>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddAutoMapper();
+
 
             services.AddScoped(typeof(IRepository<>), typeof(DbRepository<>));
             services.AddScoped<IArticlesService, ArticlesService>();
@@ -60,8 +64,23 @@ namespace FitnessGuru.Web
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, FitnessGuruWebContext context)
         {
+            if (!context.Articles.Any())
+            {
+                for (int i = 0; i < 12; i++)
+                {
+                    var article = new Article
+                    {
+                        CategoryId = 1,
+                        Content = $"It's an article"
+                    };
+                    context.Articles.Add(article);
+                }
+
+                context.SaveChanges();
+            }
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -81,6 +100,10 @@ namespace FitnessGuru.Web
 
             app.UseMvc(routes =>
             {
+                routes.MapRoute(
+                    name: "areas",
+                    template: "{area:exists}/{controller=Categories}/{action=Index}/{id?}");
+
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
