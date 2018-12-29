@@ -1,5 +1,6 @@
 ﻿using FitnessGuru.Models;
 using FitnessGuru.Models.Articles;
+using FitnessGuru.Models.Store;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -15,6 +16,10 @@ namespace FitnessGuru.Data
         public DbSet<Category> Categories { get; set; }
 
         public DbSet<Article> Articles { get; set; }
+
+        public DbSet<Product> Products { get; set; }
+
+        public DbSet<ProductCategory> ProductCategories { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
