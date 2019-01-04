@@ -20,6 +20,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using AutoMapper;
 using FitnessGuru.Models.Articles;
+using FitnessGuru.Models.Store;
+using FitnessGuru.Services.DataServices.Articles;
+using FitnessGuru.Services.DataServices.Store;
 
 namespace FitnessGuru.Web
 {
@@ -60,6 +63,8 @@ namespace FitnessGuru.Web
             services.AddScoped(typeof(IRepository<>), typeof(DbRepository<>));
             services.AddScoped<IArticlesService, ArticlesService>();
             services.AddScoped<ICategoriesService, CategoriesService>();
+            services.AddScoped<IProductCategoriesService, ProductCategoriesService>();
+            services.AddScoped<IStoreService, StoreService>();
 
         }
 
@@ -76,6 +81,22 @@ namespace FitnessGuru.Web
                         Content = $"It's an article"
                     };
                     context.Articles.Add(article);
+                }
+
+                context.SaveChanges();
+            }
+
+            if (!context.Products.Any())
+            {
+                for (int i = 0; i < 12; i++)
+                {
+                    var product = new Product
+                    {
+                        ProductCategoryId = 1,
+                        Content = $"It's a product!",
+                        Price = 10,
+                    };
+                    context.Products.Add(product);
                 }
 
                 context.SaveChanges();

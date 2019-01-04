@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using FitnessGuru.Models.Articles;
 using FitnessGuru.Services.DataServices;
+using FitnessGuru.Services.DataServices.Articles;
 using FitnessGuru.Services.Models.Categories;
 using FitnessGuru.Web.Model.Article;
 using Microsoft.AspNetCore.Authorization;

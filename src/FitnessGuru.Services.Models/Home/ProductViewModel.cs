@@ -1,18 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using FitnessGuru.Models.Articles;
+using FitnessGuru.Models.Store;
 using FitnessGuru.Services.Mapping;
 
 namespace FitnessGuru.Services.Models.Home
 {
-    public class ArticleSimpleViewModel : IMapFrom<Article>
+    public class ProductViewModel : IMapFrom<Product>
     {
         public int Id { get; set; }
 
         public string Title { get; set; }
 
         public string Content { get; set; }
+
+        public decimal Price { get; set; }
 
         public string ShortContent
         {
@@ -30,5 +32,7 @@ namespace FitnessGuru.Services.Models.Home
         }
 
         public string HtmlContent => this.ShortContent.Replace("\n", "<br />\n");
+
+        public string ProductCategoryName { get; set; }
     }
 }

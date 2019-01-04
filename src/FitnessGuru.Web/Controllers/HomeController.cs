@@ -1,5 +1,7 @@
 ﻿using System.Diagnostics;
 using FitnessGuru.Services.DataServices;
+using FitnessGuru.Services.DataServices.Articles;
+using FitnessGuru.Services.DataServices.Store;
 using FitnessGuru.Services.Models;
 using FitnessGuru.Services.Models.Home;
 using Microsoft.AspNetCore.Mvc;
@@ -9,19 +11,23 @@ namespace FitnessGuru.Web.Controllers
     public class HomeController : BaseController
     {
         private readonly IArticlesService articlesService;
+        private readonly IStoreService storeService;
 
-        public HomeController(IArticlesService articlesService)
+        public HomeController(IArticlesService articlesService, IStoreService storeService)
         {
             this.articlesService = articlesService;
+            this.storeService = storeService;
         }
 
         public IActionResult Index()
         {
             var articles = this.articlesService.GetArticles(3);
+            var products = this.storeService.GetProducts(3);
 
             var viewModel = new IndexViewModel
             {
-                Articles = articles
+                Articles = articles,
+                Products = products
             };
 
             return this.View(viewModel);

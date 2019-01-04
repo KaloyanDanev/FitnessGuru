@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using FitnessGuru.Services.DataServices;
+﻿using System.Linq;
+using FitnessGuru.Services.DataServices.Articles;
 using Microsoft.AspNetCore.Mvc;
 using X.PagedList;
 
@@ -21,22 +18,13 @@ namespace FitnessGuru.Web.Controllers
             this.articlesService = articlesService;
         }
 
-        public IActionResult Index()
-        {
-            var categories = categoriesService
-                .GetAll()
-                .ToList();
-
-            return this.View(categories);
-        }
-
         public IActionResult Details(int id, int? page)
         {
-            var jokesInCategory = this.articlesService.GetAllByCategory(id).ToList();
+            var articlesInCategory = this.articlesService.GetAllByCategory(id).ToList();
 
             var nextPage = page ?? 1;
 
-            var pagedArticles = jokesInCategory.ToPagedList(nextPage, 4);
+            var pagedArticles = articlesInCategory.ToPagedList(nextPage, 4);
 
             return this.View(pagedArticles);
         }

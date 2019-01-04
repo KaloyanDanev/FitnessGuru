@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using FitnessGuru.Data.Common;
 using FitnessGuru.Models.Articles;
 using FitnessGuru.Services.Mapping;
-using FitnessGuru.Services.Models;
 using FitnessGuru.Services.Models.Categories;
 
-namespace FitnessGuru.Services.DataServices
+namespace FitnessGuru.Services.DataServices.Articles
 {
     public class CategoriesService : ICategoriesService
     {

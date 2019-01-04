@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using FitnessGuru.Services.DataServices;
+using FitnessGuru.Services.DataServices.Articles;
 
 namespace FitnessGuru.Web.Model
 {

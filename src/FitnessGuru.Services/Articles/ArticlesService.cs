@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using FitnessGuru.Data.Common;
 using FitnessGuru.Models.Articles;
 using FitnessGuru.Services.Mapping;
-using FitnessGuru.Services.Models.Categories;
 using FitnessGuru.Services.Models.Home;
 
-namespace FitnessGuru.Services.DataServices
+namespace FitnessGuru.Services.DataServices.Articles
 {
     public class ArticlesService : IArticlesService
     {
@@ -17,8 +15,7 @@ namespace FitnessGuru.Services.DataServices
 
         public ArticlesService(
             IRepository<Article> articlesRepository,
-            IRepository<Category> categoriesRespository
-            )
+            IRepository<Category> categoriesRespository)
         {
             this.articlesRepository = articlesRepository;
             this.categoriesRespository = categoriesRespository;

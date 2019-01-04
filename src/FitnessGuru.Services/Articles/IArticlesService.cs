@@ -1,9 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using FitnessGuru.Services.Models.Categories;
 using FitnessGuru.Services.Models.Home;
 
-namespace FitnessGuru.Services.DataServices
+namespace FitnessGuru.Services.DataServices.Articles
 {
     public interface IArticlesService
     {

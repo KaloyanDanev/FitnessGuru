@@ -25,3 +25,26 @@
         </div>
     }
 </div>
+<hr />
+<h3><b>Newest Products</b></h3>
+<div class="row">
+    @foreach (var product in Model.Products)
+    {
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <a asp-controller="Articles" asp-action="Details" asp-route-id="@product.Id">
+                    <div class="panel-heading"><h4>@product.Title</h4></div>
+                </a>
+                <div class="panel-body">
+                    @Html.Raw(product.HtmlContent)
+                </div>
+                <div class="panel-heading">
+                    <h5>
+                        @product.ProductCategoryName
+                        <a class="btn btn-default btn-sm" asp-controller="Products" asp-action="Details" asp-route-id="@product.Id">View</a>
+                    </h5>
+                </div>
+            </div>
+        </div>
+    }
+</div>

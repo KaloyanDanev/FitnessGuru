@@ -6,6 +6,7 @@ using AutoMapper;
 using FitnessGuru.Data.Common;
 using FitnessGuru.Models.Articles;
 using FitnessGuru.Services.DataServices;
+using FitnessGuru.Services.DataServices.Articles;
 using FitnessGuru.Web.Areas.Administration.Models.Categories;
 using Microsoft.AspNetCore.Mvc;
 
