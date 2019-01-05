@@ -1,16 +1,9 @@
-﻿using System;
-using System.Linq;
-using System.Net;
+﻿using System.Linq;
 using System.Threading.Tasks;
-using AutoMapper;
-using FitnessGuru.Models.Articles;
-using FitnessGuru.Services.DataServices;
 using FitnessGuru.Services.DataServices.Articles;
 using FitnessGuru.Services.Models.Categories;
 using FitnessGuru.Web.Model.Article;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Identity.UI.Pages.Internal.Account;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 

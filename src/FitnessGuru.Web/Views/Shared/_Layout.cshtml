@@ -57,8 +57,8 @@
                     @if(this.User.Identity.IsAuthenticated)
                     { 
                         <li><a asp-controller="Articles" asp-action="Create">Create</a></li>
-                    }
-                    <li><a asp-controller="Categories" asp-action="Index" asp-area="Administration">Administration</a></li>
+                        <li><a asp-controller="Categories" asp-action="Index" asp-area="Administration">Administration</a></li>
+                    }                  
                 </ul>
                 <form class="navbar-form navbar-left" role="search">
                     <div class="form-group">
