@@ -1,4 +1,5 @@
-﻿@model FitnessGuru.Services.Models.Home.IndexViewModel
+﻿@using FitnessGuru.Models.Articles
+@model FitnessGuru.Services.Models.Home.IndexViewModel
 @{
     ViewData["Title"] = "Home Page";
 }
@@ -17,8 +18,7 @@
                 </div>
                 <div class="panel-heading">
                     <h5>
-                        @article.CategoryName
-                        <a class="btn btn-default btn-sm" asp-controller="Articles" asp-action="Details" asp-route-id="@article.Id">View</a>
+                        <a asp-controller="Categories" asp-action="Details" asp-route-id="@article.CategoryName">@article.CategoryName</a>                      
                     </h5>
                 </div>
             </div>
@@ -41,7 +41,6 @@
                 <div class="panel-heading">
                     <h5>
                         @product.ProductCategoryName
-                        <a class="btn btn-default btn-sm" asp-controller="Products" asp-action="Details" asp-route-id="@product.Id">View</a>
                     </h5>
                 </div>
             </div>

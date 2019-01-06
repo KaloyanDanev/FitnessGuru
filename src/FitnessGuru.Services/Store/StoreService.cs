@@ -60,8 +60,8 @@ namespace FitnessGuru.Services.DataServices.Store
             return product;
         }
 
-        public IEnumerable<ProductSimpleViewModel> GetAllByCategory(int categoryId)
+        public IEnumerable<ProductViewModel> GetAllByCategory(int categoryId)
             => this.productsRepository.All().Where(x => x.ProductCategoryId == categoryId)
-                .To<ProductSimpleViewModel>();
+                .To<ProductViewModel>();
     }
 }

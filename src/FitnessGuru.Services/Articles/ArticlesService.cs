@@ -59,10 +59,10 @@ namespace FitnessGuru.Services.DataServices.Articles
             return article;
         }
 
-        public IEnumerable<ArticleSimpleViewModel> GetAllByCategory(int categoryId)
+        public IEnumerable<ArticleViewModel> GetAllByCategory(int categoryId)
             => this.articlesRepository
                 .All()
                 .Where(j => j.CategoryId == categoryId)
-                .To<ArticleSimpleViewModel>();
+                .To<ArticleViewModel>();
     }
 }

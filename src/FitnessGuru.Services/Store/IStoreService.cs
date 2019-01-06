@@ -14,6 +14,6 @@ namespace FitnessGuru.Services.DataServices.Store
 
         TViewModel GetProductById<TViewModel>(int id);
 
-        IEnumerable<ProductSimpleViewModel> GetAllByCategory(int categoryId);
+        IEnumerable<ProductViewModel> GetAllByCategory(int categoryId);
     }
 }
