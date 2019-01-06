@@ -7,8 +7,10 @@ using FitnessGuru.Services.Mapping;
 namespace FitnessGuru.Services.Models.Categories
 {
    public class ArticleDetailsViewModel : IMapFrom<Article>
-    {
+    {   
         public string Title { get; set; }
+
+        public string ArticleDescription { get; set; }
 
         public string Content { get; set; }
 

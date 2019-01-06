@@ -6,6 +6,8 @@ namespace FitnessGuru.Models.Articles
     {
         public string Title { get; set; }
 
+        public string ArticleDescription { get; set; }
+
         public string Content { get; set; }
 
         public string ImgUrl { get; set; }

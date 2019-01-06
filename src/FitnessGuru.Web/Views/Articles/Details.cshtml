@@ -3,7 +3,8 @@
     ViewData["Title"] = "Details";
 }
 <h2>Details</h2>
-<div>
+
+<div class="pull-left">
     <hr />
     <dl class="dl-horizontal">
         <dd>
@@ -11,11 +12,20 @@
             <hr />
         </dd>
         <dd>
-             @Html.DisplayFor(model => model.Content)
+            <h5 style="color: grey"> @Html.DisplayFor(model => model.ArticleDescription)</h5>
             <hr />
-        </dd> 
+        </dd>
         <dd>
-            <b>@Html.DisplayFor(model => model.CategoryName)</b>
+             <img height="300" width="950" src="@Model.ImgUrl"/>
+            <hr/>
+        </dd>
+       
+        <dd>
+            @Html.DisplayFor(model => model.Content)
+            <hr />
+        </dd>
+        <dd>
+            <h4>@Html.DisplayFor(model => model.CategoryName)</h4>
             <hr />
         </dd>
     </dl>
