@@ -6,25 +6,17 @@
 <div>
     <hr />
     <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Title) :
-        </dt>
         <dd>
-            @Html.DisplayFor(model => model.Title)
+            <h2 style="color: black"> @Html.DisplayFor(model => model.Title)</h2>
             <hr />
         </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Content) :
-        </dt>
         <dd>
-            @Html.DisplayFor(model => model.Content)
+             @Html.DisplayFor(model => model.Content)
             <hr />
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.CategoryName) :
-        </dt>
+        </dd> 
         <dd>
-            @Html.DisplayFor(model => model.CategoryName)
+            <b>@Html.DisplayFor(model => model.CategoryName)</b>
+            <hr />
         </dd>
     </dl>
 </div>
