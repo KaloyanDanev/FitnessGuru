@@ -18,7 +18,7 @@ namespace FitnessGuru.Services.Models.Home
             {
                 if (this.Content?.Length > 150)
                 {
-                    return this.Content.Substring(0, 150) + "...";
+                    return this.Content.Substring(0, 130) + "...";
                 }
                 else
                 {

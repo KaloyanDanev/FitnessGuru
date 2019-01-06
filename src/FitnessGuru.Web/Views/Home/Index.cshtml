@@ -33,15 +33,18 @@
         <div class="col-md-4">
             <div class="panel panel-default">
                 <a asp-controller="Products" asp-action="Details" asp-route-id="@product.Id">
-                    <img height="125" width="115" class="center-block" src="@product.ImgUrl" />
-                    <div class="panel-heading text-center"><h4>@product.Title</h4></div>
+                  
+                    <div class="panel-heading"><h4>@product.Title</h4></div>
+                    <img height="125" width="115" class="center-block col-md-5" src="@product.ImgUrl" />
                 </a>
-                <div class="panel-body text-center">
+                <div class="panel-body ">
                     @Html.Raw(product.HtmlContent)
+                    <br/>
+                    $@product.Price
                 </div>
                 <div class="panel-heading">
                     <h5>
-                     $@product.Price   @product.ProductCategoryName
+                       @product.ProductCategoryName
                     </h5>
                 </div>              
             </div>
