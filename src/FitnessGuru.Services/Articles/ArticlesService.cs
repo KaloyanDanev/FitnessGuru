@@ -35,13 +35,14 @@ namespace FitnessGuru.Services.DataServices.Articles
             return this.articlesRepository.All().Count();
         }
 
-        public async Task<int> Create(int categoryId, string content, string title)
+        public async Task<int> Create(int categoryId, string content, string title, string imgUrl)
         {
             var article = new Article
             {
                 Title = title,
                 CategoryId = categoryId,
-                Content = content
+                Content = content,
+                ImgUrl = imgUrl
             };
 
             await this.articlesRepository.AddAsync(article);

@@ -13,6 +13,8 @@ namespace FitnessGuru.Models.Store
 
         public decimal Price { get; set; }
 
+        public string ImgUrl { get; set; }
+
         public int ProductCategoryId { get; set; }
 
         public virtual ProductCategory ProductCategory { get; set; }

@@ -11,6 +11,8 @@ namespace FitnessGuru.Web.Model.Article
         [MinLength(150)]
         public string Content { get; set; }
 
+        public string ImgUrl { get; set; }
+
         [ValidCategoryId]
         public int CategoryId { get; set; }
     }

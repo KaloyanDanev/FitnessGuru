@@ -34,5 +34,7 @@ namespace FitnessGuru.Services.Models.Home
         public string HtmlContent => this.ShortContent.Replace("\n", "<br />\n");
 
         public string ProductCategoryName { get; set; }
+
+        public string ImgUrl { get; set; }
     }
 }

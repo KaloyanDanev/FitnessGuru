@@ -15,5 +15,7 @@ namespace FitnessGuru.Services.Models.Store
         public decimal Price { get; set; }
 
         public string ProductCategoryName { get; set; }
+
+        public string ImgUrl { get; set; }
     }
 }

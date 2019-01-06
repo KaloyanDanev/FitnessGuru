@@ -36,14 +36,15 @@ namespace FitnessGuru.Services.DataServices.Store
             return this.productsRepository.All().Count();
         }
 
-        public async Task<int> Create(int categoryId, string content, string title, decimal price)
+        public async Task<int> Create(int categoryId, string content, string title, decimal price,string imgUrl)
         {
             var product = new Product
             {
                 Title = title,
                 ProductCategoryId = categoryId,
                 Content = content,
-                Price = price
+                Price = price,
+                ImgUrl = imgUrl
             };
             await this.productsRepository.AddAsync(product);
             await this.productsRepository.SaveChangesAsync();

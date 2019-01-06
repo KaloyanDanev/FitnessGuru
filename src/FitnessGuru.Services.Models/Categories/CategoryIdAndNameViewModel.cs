@@ -12,5 +12,7 @@ namespace FitnessGuru.Services.Models.Categories
         public string NameCount => $"{this.Name} ({this.ArticlesCount})";
 
         public int ArticlesCount { get; set; }
+
+        public string ImgUrl { get; set; }
     }
 }

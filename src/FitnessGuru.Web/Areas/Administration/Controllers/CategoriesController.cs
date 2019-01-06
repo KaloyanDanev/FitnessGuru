@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 using AutoMapper;
 using FitnessGuru.Data.Common;
@@ -8,10 +9,12 @@ using FitnessGuru.Models.Articles;
 using FitnessGuru.Services.DataServices;
 using FitnessGuru.Services.DataServices.Articles;
 using FitnessGuru.Web.Areas.Administration.Models.Categories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FitnessGuru.Web.Areas.Administration.Controllers
 {
+    [Authorize(Roles = "Administrator")]
     public class CategoriesController : AdministrationBaseController
     {
         private readonly ICategoriesService categoriesService;

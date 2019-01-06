@@ -14,6 +14,8 @@ namespace FitnessGuru.Web.Model.Product
         [Required]
         public decimal Price { get; set; }
 
+        public string ImgUrl { get; set; }
+
         [ValidCategoryId]
         public int CategoryId { get; set; }
     }

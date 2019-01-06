@@ -10,7 +10,7 @@ namespace FitnessGuru.Services.DataServices.Store
 
         int GetCount();
 
-        Task<int> Create(int categoryId, string content, string title, decimal price);
+        Task<int> Create(int categoryId, string content, string title, decimal price,string imgUrl);
 
         TViewModel GetProductById<TViewModel>(int id);
 

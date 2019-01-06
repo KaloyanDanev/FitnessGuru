@@ -15,7 +15,7 @@ namespace FitnessGuru.Data.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.1.4-rtm-31024")
+                .HasAnnotation("ProductVersion", "2.2.0-rtm-35687")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -28,6 +28,8 @@ namespace FitnessGuru.Data.Migrations
                     b.Property<int>("CategoryId");
 
                     b.Property<string>("Content");
+
+                    b.Property<string>("ImgUrl");
 
                     b.Property<string>("Title");
 
@@ -109,6 +111,8 @@ namespace FitnessGuru.Data.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Content");
+
+                    b.Property<string>("ImgUrl");
 
                     b.Property<decimal>("Price");
 

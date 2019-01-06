@@ -1,13 +1,13 @@
 ﻿@model FitnessGuru.Services.Models.Store.ProductDetailsViewModel
-
 @{
     ViewData["Title"] = "Details";
 }
 
 <h2>Details</h2>
 
-<div>
+<div class="col-md-6">
     <hr />
+ 
     <dl class="dl-horizontal">
         <dd>
             <h2 style="color: black"> @Html.DisplayFor(model => model.Title)</h2>
@@ -26,7 +26,9 @@
             <hr />
         </dd>
     </dl>
+    <div>
+        <a asp-action="Index" asp-controller="Home">Back to Home Page</a>
+    </div>
 </div>
-<div>
-    <a asp-action="Index" asp-controller="Home">Back to Home Page</a>
-</div>
+<img height="400" width="250" src="@Model.ImgUrl" />  
+

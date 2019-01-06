@@ -13,5 +13,7 @@ namespace FitnessGuru.Services.Models.Categories
         public string Content { get; set; }
 
         public string CategoryName { get; set; }
+
+        public string ImgUrl { get; set; }
     }
 }
