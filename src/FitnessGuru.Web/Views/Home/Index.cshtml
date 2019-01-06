@@ -3,8 +3,7 @@
 @{
     ViewData["Title"] = "Home Page";
 }
-<br />
-<h3><b>Newest Articles</b></h3>
+<div style="margin-top:80px"><h3><b>Newest Articles</b></h3></div>
 <div class="row">
     @foreach (var article in Model.Articles)
     {
@@ -29,7 +28,7 @@
     }
 </div>
 <hr />
-<h3><b>Newest Products</b></h3>
+<div style="margin-top:70px"><h3><b>Newest Products</b></h3></div>
 <div class="row">
     @foreach (var product in Model.Products)
     {
