@@ -10,9 +10,9 @@
             <li data-target="#carousel" data-slide-to="1"></li>
             <li data-target="#carousel" data-slide-to="2"></li>
         </ol>
-        <div class="carousel-inner" >
+        <div class="carousel-inner">
             <div class="item active">
-                <img src="/images/indexSlide1.jpg" style="height: 400px;width: 100%"  />
+                <img src="/images/indexSlide1.jpg" style="height: 400px;width: 100%" />
                 <div class="container">
                     <div class="carousel-caption">
                         <h1 style="color: white">Welcome to FintessGuru!</h1>
@@ -64,7 +64,15 @@
                 </div>
                 <div class="">
                     <h5>
-                        <a asp-controller="Categories" asp-action="Details" asp-route-id="@article.Id">@article.CategoryName</a>
+                        @{
+                            var routeId = 0;
+                            if (article.CategoryName == "Training") { routeId = 1; }
+                            else if (article.CategoryName == "Workouts") { routeId = 2; }
+                            else if (article.CategoryName == "Nutrition") { routeId = 3; }
+                            else if (article.CategoryName == "For Women") { routeId = 4; }
+                            else if (article.CategoryName == "Other Topics") { routeId = 5; }
+                            <a asp-controller="Categories" asp-action="Details" asp-route-id="@routeId">@article.CategoryName</a>
+                        }
                     </h5>
                 </div>
             </div>
@@ -90,7 +98,16 @@
                 </div>
                 <div class="">
                     <h5>
-                        @product.ProductCategoryName
+                        @{
+                            var routeId = 0;
+                            if (@product.ProductCategoryName == "Protein") { routeId = 1; }
+                            else if (@product.ProductCategoryName == "Creatine") { routeId = 2; }
+                            else if (@product.ProductCategoryName == "Pre-Workout") { routeId = 3; }
+                            else if (@product.ProductCategoryName == "Bcaa") { routeId = 4; }
+                            else if (@product.ProductCategoryName == "Fat Burner") { routeId = 5; }
+                            else if (@product.ProductCategoryName == "Shaker Bottle") { routeId = 6; }
+                            <a asp-controller="Categories" asp-action="ProductDetails" asp-route-id="@routeId">@product.ProductCategoryName</a>
+                        }
                     </h5>
                 </div>
             </div>
