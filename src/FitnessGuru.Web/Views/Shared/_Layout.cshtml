@@ -3,18 +3,21 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
- 
+
     <title>@ViewData["Title"] - FitnessGuru</title>
 
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap-cerulean.css" />
         <link rel="stylesheet" href="~/css/site.css" />
+
     </environment>
+   
     <environment exclude="Development">
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
               asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+      
     </environment>
 </head>
 <body>
@@ -29,10 +32,10 @@
                 </button>
                 <a class="pull-left" href="/">
                     <img src="/images/FitnessGuru.jpg" width="90" class="img-rounded" />
-                </a>             
+                </a>
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">             
+                <ul class="nav navbar-nav">
                     <li class="dropdown">
                         <a asp-controller="Articles" asp-action="Details" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Articles<span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
@@ -42,16 +45,16 @@
                             <li><a asp-controller="Categories" asp-action="Details" asp-route-id="4">For Women</a></li>
                             <li><a asp-controller="Categories" asp-action="Details" asp-route-id="5">Other Topics</a></li>
                         </ul>
-                    </li>               
+                    </li>
                     <li class="dropdown">
                         <a a asp-area="" asp-controller="Store" asp-action="Store" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Store <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a asp-area="" asp-controller="Protein" asp-action="Protein">Protein</a></li>
-                            <li><a asp-area="" asp-controller="Creatine" asp-action="Creatine">Creatine</a></li>
-                            <li><a asp-area="" asp-controller="Pre-Workout" asp-action="Pre-Workout">Pre-Workout</a></li>
-                            <li><a asp-area="" asp-controller="BCAA" asp-action="BCAA">BCAAs</a></li>
-                            <li><a asp-area="" asp-controller="FatBurners" asp-action="FatBurners">Fat Burners</a></li>
-                            <li><a asp-area="" asp-controller="ShakerBottles" asp-action="ShakerBottles">Shaker Bottles</a></li>
+                            <li><a asp-controller="Categories" asp-action="ProductDetails" asp-route-id="1">Protein</a></li>
+                            <li><a asp-controller="Categories" asp-action="ProductDetails" asp-route-id="2">Creatine</a></li>
+                            <li><a asp-controller="Categories" asp-action="ProductDetails" asp-route-id="3">Pre-Workout</a></li>
+                            <li><a asp-controller="Categories" asp-action="ProductDetails" asp-route-id="4">BCAAs</a></li>
+                            <li><a asp-controller="Categories" asp-action="ProductDetails" asp-route-id="5">Fat Burners</a></li>
+                            <li><a asp-controller="Categories" asp-action="ProductDetails" asp-route-id="6">Shaker Bottles</a></li>
                         </ul>
                     </li>
                     <li><a asp-area="" asp-controller="Forum" asp-action="Forum">Forum</a></li>
@@ -78,7 +81,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <strong>&copy; 2018 - FitnessGuru</strong>
+            <b style="color: white">&copy; 2018 - FitnessGuru</b>
         </footer>
     </div>
 

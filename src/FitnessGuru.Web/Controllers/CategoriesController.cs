@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using FitnessGuru.Services.DataServices.Articles;
+using FitnessGuru.Services.DataServices.Store;
 using Microsoft.AspNetCore.Mvc;
 using X.PagedList;
 
@@ -9,13 +10,19 @@ namespace FitnessGuru.Web.Controllers
     {
         private readonly ICategoriesService categoriesService;
         private readonly IArticlesService articlesService;
+        private readonly IProductCategoriesService productCategoriesService;
+        private readonly IStoreService storeService;
 
         public CategoriesController(
             ICategoriesService categoriesService,
-            IArticlesService articlesService)
+            IArticlesService articlesService,
+            IProductCategoriesService productCategoriesService,
+            IStoreService storeService)
         {
             this.categoriesService = categoriesService;
             this.articlesService = articlesService;
+            this.productCategoriesService = productCategoriesService;
+            this.storeService = storeService;
         }
 
         public IActionResult Details(int id, int? page)
@@ -27,6 +34,17 @@ namespace FitnessGuru.Web.Controllers
             var pagedArticles = articlesInCategory.ToPagedList(nextPage, 4);
 
             return this.View(pagedArticles);
+        }
+
+        public IActionResult ProductDetails(int id, int? page)
+        {
+            var productInCategory = this.storeService.GetAllByCategory(id).ToList();
+
+            var nextPage = page ?? 1;
+
+            var pagedProduct = productInCategory.ToPagedList(nextPage, 4);
+
+            return this.View(pagedProduct);
         }
     }
 }

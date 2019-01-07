@@ -21,8 +21,8 @@ namespace FitnessGuru.Web.Controllers
 
         public IActionResult Index()
         {
-            var articles = this.articlesService.GetArticles(3);
-            var products = this.storeService.GetProducts(3);
+            var articles = this.articlesService.GetArticles(6);
+            var products = this.storeService.GetProducts(6);
 
             var viewModel = new IndexViewModel
             {
