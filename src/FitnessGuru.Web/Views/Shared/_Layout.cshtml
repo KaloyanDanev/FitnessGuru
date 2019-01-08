@@ -31,7 +31,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="pull-left" href="/">
-                    <img src="/images/FitnessGuru.jpg" width="90" class="img-rounded" />
+                    <img src="/images/FitnessGuruLogo.jpg" width="90" class="img-rounded" />
                 </a>
             </div>
             <div class="navbar-collapse collapse">
@@ -47,7 +47,7 @@
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a a asp-area="" asp-controller="Store" asp-action="Store" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Store <span class="caret"></span></a>
+                        <a asp-controller="Products" asp-action="Details" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Store <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a asp-controller="Categories" asp-action="ProductDetails" asp-route-id="1">Protein</a></li>
                             <li><a asp-controller="Categories" asp-action="ProductDetails" asp-route-id="2">Creatine</a></li>
@@ -57,7 +57,7 @@
                             <li><a asp-controller="Categories" asp-action="ProductDetails" asp-route-id="6">Shaker Bottles</a></li>
                         </ul>
                     </li>
-                    <li><a asp-area="" asp-controller="Forum" asp-action="Forum">Forum</a></li>
+                    <li><a asp-controller="Forum" asp-action="Forum">Forum</a></li>
                     @if (this.User.Identity.IsAuthenticated && User.IsInRole("Admin"))
                     {
                         <li><a asp-controller="Articles" asp-action="Create">Create</a></li>
@@ -70,13 +70,11 @@
                     </div>
                     <button type="submit" class="btn btn-default">Submit</button>
                 </form>
-                <partial name="_LoginPartial" />
+                <partial name="_LoginPartial"/>
             </div>
         </div>
     </nav>
-
     <partial name="_CookieConsentPartial" />
-
     <div class="container body-content">
         @RenderBody()
         <hr />

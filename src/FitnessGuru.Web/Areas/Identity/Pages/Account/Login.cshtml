@@ -3,10 +3,10 @@
 
 @{
     ViewData["Title"] = "Log in";
-}
+}   
 
-<div class="row"style="background-color: white; margin-top: 60px">
-    <div class="col-md-4">
+<div class="row col-md-4"style="background-color: white; float: left; margin-top: 60px">
+    <div class="col-md-12">
         <section>
             <form method="post">
                 <h2>@ViewData["Title"]</h2>
@@ -44,37 +44,8 @@
             </form>
         </section>
     </div>
-    <div class="col-md-6 col-md-offset-2">
-        <section>
-            <h4>Use another service to log in.</h4>
-            <hr />
-            @{
-                if ((Model.ExternalLogins?.Count ?? 0) == 0)
-                {
-                    <div>
-                        <p>
-                            There are no external authentication services configured. See <a href="https://go.microsoft.com/fwlink/?LinkID=532715">this article</a>
-                            for details on setting up this ASP.NET application to support logging in via external services.
-                        </p>
-                    </div>
-                }
-                else
-                {
-                    <form asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form-horizontal">
-                        <div>
-                            <p>
-                                @foreach (var provider in Model.ExternalLogins)
-                                {
-                                    <button type="submit" class="btn btn-default" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button>
-                                }
-                            </p>
-                        </div>
-                    </form>
-                }
-            }
-        </section>
-    </div>
 </div>
+<img src="/images/Login.jpg" style=" height: 400px; width: 700px; margin-top:100px" class="pull-right" />
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />

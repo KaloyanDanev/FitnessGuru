@@ -23,6 +23,8 @@ using FitnessGuru.Models.Articles;
 using FitnessGuru.Models.Store;
 using FitnessGuru.Services.DataServices.Articles;
 using FitnessGuru.Services.DataServices.Store;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.Facebook;
 
 namespace FitnessGuru.Web
 {
@@ -58,7 +60,7 @@ namespace FitnessGuru.Web
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddAutoMapper();
-
+   
 
             services.AddScoped(typeof(IRepository<>), typeof(DbRepository<>));
             services.AddScoped<IArticlesService, ArticlesService>();

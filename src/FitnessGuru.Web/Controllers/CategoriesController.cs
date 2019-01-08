@@ -39,7 +39,7 @@ namespace FitnessGuru.Web.Controllers
         public IActionResult ProductDetails(int id, int? page)
         {
             var productInCategory = this.storeService.GetAllByCategory(id).ToList();
-
+             
             var nextPage = page ?? 1;
 
             var pagedProduct = productInCategory.ToPagedList(nextPage, 4);

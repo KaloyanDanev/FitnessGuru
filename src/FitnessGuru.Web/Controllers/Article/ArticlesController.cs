@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace FitnessGuru.Web.Controllers
+namespace FitnessGuru.Web.Controllers.Article
 {
     public class ArticlesController : BaseController
     {
