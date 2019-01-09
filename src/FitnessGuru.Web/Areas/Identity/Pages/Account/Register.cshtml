@@ -5,9 +5,10 @@
 }
 
 <div class="row" style="float: left;background-color: white; margin-top: 60px">
-    <div class="col-md-12">
+    <div class="col-md-10">
         <form asp-route-returnUrl="@Model.ReturnUrl" method="post">
-            <h2>Create a new account</h2>
+            <h2>Create An Account</h2>
+            <b>Join our fitness community and set goals, track workouts, and more!</b>
             <hr />
             <div asp-validation-summary="All" class="text-danger"></div>
             <div class="form-group">
@@ -29,7 +30,7 @@
         </form> 
     </div>
 </div>
-<img class="col-md-8" src="/images/Register.jpg" style="float: right; height: 350px; margin-top:100px" />
+<img class="col-md-7" src="/images/Register.jpg" style="float: right; height: 350px; margin-top:100px" />
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />

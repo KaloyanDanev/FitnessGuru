@@ -4,22 +4,22 @@
 }
 <div class="container" style="background-color: white;margin-top: 50px">
     <hr />
-    <img height="400" width="250" style="float: left" src="@Model.ImgUrl" />
+    <img height="400" width="250" style="float: left;padding-right: 20px" src="@Model.ImgUrl" />
     <dl class="dl-horizontal;col-md-4">
         <dd>
             <h2 style="color: black"> @Html.DisplayFor(model => model.Title)</h2>
             <hr />
         </dd>
         <dd>
-            @Html.DisplayFor(model => model.Content)
+            <b>@Html.DisplayFor(model => model.Content)</b>
             <hr />
         </dd>
         <dd>
-            @Html.DisplayNameFor(model => model.Price) : <b>$@Html.DisplayFor(model => model.Price)</b>
+            <b>@Html.DisplayFor(model => model.ProductCategoryName)   </b>
             <hr />
         </dd>
         <dd>
-            @Html.DisplayFor(model => model.ProductCategoryName)
+            <b>$@Html.DisplayFor(model => model.Price)</b>
             <hr />
         </dd>
     </dl>
@@ -27,5 +27,5 @@
         <b><a asp-action="Index" asp-controller="Home">Back to Home Page</a></b>
     </div>
 </div>
- 
+
 

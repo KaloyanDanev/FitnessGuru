@@ -51,18 +51,17 @@
     <div class="text-center"><h2><b>Newest Articles</b></h2></div>
     @foreach (var article in Model.Articles)
     {
-        <div class="col-md-4">
+        <div class="col-md-4" style="margin-top: 30px">
             <div class="col-md-12">
                 <a asp-controller="Articles" asp-action="Details" class="text-center" asp-route-id="@article.Id">
                     <img height="200" width="359" class=" img-rounded " src="@article.ImgUrl" />
                 </a>
                 <a asp-controller="Articles" asp-action="Details" asp-route-id="@article.Id">
-                    <h4 style="font-family: cursive">@article.Title</h4>
+                    <h4>@article.Title</h4>
                 </a>
                 <div style="color: black;font-size: 15px">
                     @article.ArticleDescription
                 </div>
-                <div class="">
                     <h5>
                         @{
                             var routeId = 0;
@@ -76,27 +75,24 @@
                     </h5>
                 </div>
             </div>
-        </div>
     }
 </div>
 <hr />
-
-<div class="row" style="margin-top:40px">
+<div class="row" style="margin-top:50px">
     <div class="text-center"><h2><b>Newest Articles</b></h2></div>
     @foreach (var product in Model.Products)
     {
-        <div class="col-md-4">
+        <div class="col-md-4" style="margin-top: 20px">
             <div class="col-md-12">
                 <a asp-controller="Products" asp-action="Details" asp-route-id="@product.Id">
-                    <div class="panel-heading"><h4 style="font-family: cursive">@product.Title</h4></div>
+                    <div class="panel-heading"><h4 style="font-size: 20px">@product.Title</h4></div>
                     <img height="180" width="130" class="center-block col-md-5" src="@product.ImgUrl" />
                 </a>
-                <div class="row ">
+                <div class="row"style="color: black;font-size: 15px">
                     @Html.Raw(product.HtmlContent)
                     <br />
-                    $@product.Price
+                    <div style="margin-top: 10px">$@product.Price</div>
                 </div>
-                <div class="">
                     <h5>
                         @{
                             var routeId = 0;
@@ -111,6 +107,5 @@
                     </h5>
                 </div>
             </div>
-        </div>
     }
 </div>
