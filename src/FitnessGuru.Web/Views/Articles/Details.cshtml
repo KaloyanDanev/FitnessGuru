@@ -4,13 +4,21 @@
 }
 
 <div class="pull-left table-bordered" style="margin: 40px">
-    <div class="col-md-12">
-        <h5>@Html.DisplayFor(model => model.CategoryName)</h5>
+    <div class="col-md-12">       
+        <h5>  @{
+                  var routeId = 0;
+                  if (Model.CategoryName == "Training") { routeId = 1; }
+                  else if (Model.CategoryName == "Workouts") { routeId = 2; }
+                  else if (Model.CategoryName == "Nutrition") { routeId = 3; }
+                  else if (Model.CategoryName == "For Women") { routeId = 4; }
+                  else if (Model.CategoryName == "Other Topics") { routeId = 5; }
+                  <a asp-controller="Categories" asp-action="Details" asp-route-id="@routeId">@Model.CategoryName</a>
+              }</h5>
         <h2 style="color: black"> @Html.DisplayFor(model => model.Title)</h2>
         <h4 style="color: grey"> @Html.DisplayFor(model => model.ArticleDescription)</h4>
         <div class="col-md-12" style="margin: 30px">
-            <img style="float: left; height: 300px; padding-right: 15px;padding-bottom: 15px" src="@Model.ImgUrl" />
-            <div style="color: black; size: auto">@Html.DisplayFor(model => model.Content) </div>
+            <img style="float: left; height: 300px; padding-right: 15px; padding-bottom: 15px" src="@Model.ImgUrl"/>
+            <div style="color: black; padding-right: 50px; size: auto">@Html.DisplayFor(model => model.Content) </div>
         </div>
     </div>
 </div>

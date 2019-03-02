@@ -15,7 +15,18 @@
             <hr />
         </dd>
         <dd>
-            <b>@Html.DisplayFor(model => model.ProductCategoryName)   </b>
+            <b>
+                @{
+                    var routeId = 0;
+                    if (Model.ProductCategoryName == "Protein") { routeId = 1; }
+                    else if (Model.ProductCategoryName == "Creatine") { routeId = 2; }
+                    else if (Model.ProductCategoryName == "Pre-Workout") { routeId = 3; }
+                    else if (Model.ProductCategoryName == "Bcaa") { routeId = 4; }
+                    else if (Model.ProductCategoryName == "Fat Burner") { routeId = 5; }
+                    else if (Model.ProductCategoryName == "Shaker Bottle") { routeId = 6; }
+                    <a asp-controller="Categories" asp-action="ProductDetails" asp-route-id="@routeId">@Model.ProductCategoryName</a>
+                }
+            </b>
             <hr />
         </dd>
         <dd>
