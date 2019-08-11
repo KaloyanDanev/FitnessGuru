@@ -1,4 +1,12 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿// Activate Carousel
+$("#myCarousel").carousel();
 
-// Write your JavaScript code.
+// Enable Carousel Indicators
+$(".item").click(function () {
+    $("#myCarousel").carousel(1);
+});
+
+// Enable Carousel Controls
+$(".left").click(function () {
+    $("#myCarousel").carousel("prev");
+});

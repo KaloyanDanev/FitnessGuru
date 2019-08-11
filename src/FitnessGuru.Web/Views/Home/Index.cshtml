@@ -4,11 +4,11 @@
     ViewData["Title"] = "Home Page";
 }
 <div>
-    <div id="carousel" class="carousel slide">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
-            <li data-target="#carousel" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel" data-slide-to="1"></li>
-            <li data-target="#carousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
         </ol>
         <div class="carousel-inner">
             <div class="item active">
@@ -37,15 +37,7 @@
             </div>
         </div>
     </div>
-
-    <script>
-        $("#carousel").carousel({
-            interval: 1000
-        });
-
-    </script>
 </div>
-
 
 <div class="row " style="margin-top: 50px">
     <div class="text-center"><h2><b>Newest Articles</b></h2></div>
