@@ -132,5 +132,7 @@ namespace FitnessGuru.Web
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
         }
+
+
     }
 }

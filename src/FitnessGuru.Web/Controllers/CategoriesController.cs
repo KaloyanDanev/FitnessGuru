@@ -31,7 +31,7 @@ namespace FitnessGuru.Web.Controllers
 
             var nextPage = page ?? 1;
 
-            var pagedArticles = articlesInCategory.ToPagedList(nextPage, 4);
+            var pagedArticles = articlesInCategory.ToPagedList(nextPage, 100);
 
             return this.View(pagedArticles);
         }
@@ -42,7 +42,7 @@ namespace FitnessGuru.Web.Controllers
              
             var nextPage = page ?? 1;
 
-            var pagedProduct = productInCategory.ToPagedList(nextPage, 4);
+            var pagedProduct = productInCategory.ToPagedList(nextPage, 100);
 
             return this.View(pagedProduct);
         }

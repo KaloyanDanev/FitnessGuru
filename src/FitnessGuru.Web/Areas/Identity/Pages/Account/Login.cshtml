@@ -1,11 +1,9 @@
 ﻿@page
 @model LoginModel
-
 @{
     ViewData["Title"] = "Log in";
-}   
-
-<div class="row col-md-4"style="background-color: white; float: left; margin-top: 60px">
+}
+<div class="row col-md-4" style="background-color: white; float: left; margin-top: 60px">
     <div class="col-md-12">
         <section>
             <form method="post">
@@ -45,8 +43,7 @@
         </section>
     </div>
 </div>
-<img src="/images/Login.jpg" style=" height: 400px; width: 700px; margin-top:100px" class="pull-right" />
-
+<img class="col-md-6" src="/images/Login.jpg" style="margin-left: 10%;margin-top: 5%" />
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
 }
