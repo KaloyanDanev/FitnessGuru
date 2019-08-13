@@ -60,6 +60,7 @@
                     @if (this.User.Identity.IsAuthenticated && User.Identity.Name == "admin@admin.com")
                     {
                         <li><a asp-controller="Articles" asp-action="Create">Create</a></li>
+                        <li><a asp-controller="Categories" asp-action="Index" asp-area="Administration">Administration</a></li>
                     }
                 </ul>
                                 

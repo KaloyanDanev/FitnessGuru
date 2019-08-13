@@ -14,7 +14,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace FitnessGuru.Web.Areas.Administration.Controllers
 {
-    [Authorize(Roles = "Administrator")]
+    
     public class CategoriesController : AdministrationBaseController
     {
         private readonly ICategoriesService categoriesService;

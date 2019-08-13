@@ -35,15 +35,16 @@ namespace FitnessGuru.Services.DataServices.Articles
             return this.articlesRepository.All().Count();
         }
 
-        public async Task<int> Create(int categoryId,string description,string content, string title, string imgUrl)
+        public async Task<int> Create(string title,string description, string content, string imgUrl, int categoryId)
         {
             var article = new Article
             {
                 Title = title,
-                CategoryId = categoryId,
                 ArticleDescription = description,
                 Content = content,
                 ImgUrl = imgUrl,
+                CategoryId = categoryId,
+
             };
 
             await this.articlesRepository.AddAsync(article);
@@ -66,5 +67,7 @@ namespace FitnessGuru.Services.DataServices.Articles
                 .All()
                 .Where(j => j.CategoryId == categoryId)
                 .To<ArticleViewModel>();
+
+       
     }
 }
