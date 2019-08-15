@@ -55,10 +55,11 @@
                             <li><a asp-controller="Categories" asp-action="ProductsCategory" asp-route-id="6">Shaker Bottles</a></li>
                         </ul>
                     </li>
-                    <li class="disabled"><a asp-controller="Forum" asp-action="Forum">Forum</a></li>
                     @if (this.User.Identity.IsAuthenticated && User.Identity.Name == "admin@admin.com")
                     {
-                        <li><a asp-controller="Articles" asp-action="Create">Create</a></li>
+                        <li><a asp-controller="Articles" asp-action="Create">Create Article</a></li>
+                        <li><a asp-controller="Products" asp-action="Create">Create Product</a></li>
+
                         <li><a asp-controller="Categories" asp-action="Index" asp-area="Administration">Administration</a></li>
                     }
                 </ul>
