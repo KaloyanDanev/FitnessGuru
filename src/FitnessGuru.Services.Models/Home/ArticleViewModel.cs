@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using FitnessGuru.Models.Articles;
 using FitnessGuru.Services.Mapping;
 

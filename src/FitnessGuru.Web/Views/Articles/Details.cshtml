@@ -27,7 +27,7 @@
                 {
                     routeId = 5;
                 }
-                <a asp-controller="Categories" asp-action="Details" asp-route-id="@routeId">@Model.CategoryName</a>
+                <a asp-controller="Categories" asp-action="ArticlesCategory" asp-route-id="@routeId">@Model.CategoryName</a>
             }
         </h5>
         <h1 style="color: black"> @Html.DisplayFor(model => model.Title)</h1>

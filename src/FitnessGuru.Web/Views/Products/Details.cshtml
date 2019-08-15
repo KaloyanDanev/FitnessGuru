@@ -2,7 +2,7 @@
 @{
     ViewData["Title"] = "Product Details";
 }
-<div class="container" style="background-color: white;margin-top: 50px">
+<div class="container" style="background-color: #f5f2f2;margin-top: 50px">
     <hr />
     <img height="400" width="250" style="float: left;padding-right: 20px" src="@Model.ImgUrl" />
     <dl class="dl-horizontal;col-md-4">
@@ -24,7 +24,7 @@
                     else if (Model.ProductCategoryName == "Bcaa") { routeId = 4; }
                     else if (Model.ProductCategoryName == "Fat Burner") { routeId = 5; }
                     else if (Model.ProductCategoryName == "Shaker Bottle") { routeId = 6; }
-                    <a asp-controller="Categories" asp-action="ProductDetails" asp-route-id="@routeId">@Model.ProductCategoryName</a>
+                    <a asp-controller="Categories" asp-action="ProductsCategory" asp-route-id="@routeId">@Model.ProductCategoryName</a>
                 }
             </b>
             <hr />

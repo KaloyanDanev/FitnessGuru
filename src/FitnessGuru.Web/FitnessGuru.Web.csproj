@@ -43,7 +43,7 @@
     <Content Update="Views\Categories\Index.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
-    <Content Update="Views\Categories\Details.cshtml">
+    <Content Update="Views\Categories\ArticlesCategory.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
   </ItemGroup>

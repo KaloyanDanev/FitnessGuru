@@ -25,7 +25,7 @@ namespace FitnessGuru.Web.Controllers
             this.storeService = storeService;
         }
 
-        public IActionResult Details(int id, int? page)
+        public IActionResult ArticlesCategory(int id, int? page)
         {
             var articlesInCategory = this.articlesService.GetAllByCategory(id).ToList();
 
@@ -36,7 +36,7 @@ namespace FitnessGuru.Web.Controllers
             return this.View(pagedArticles);
         }
 
-        public IActionResult ProductDetails(int id, int? page)
+        public IActionResult ProductsCategory(int id, int? page)
         {
             var productInCategory = this.storeService.GetAllByCategory(id).ToList();
              
