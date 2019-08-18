@@ -14,8 +14,8 @@ $(".item3").click(function () {
 
 // Enable Carousel Controls
 $(".left").click(function () {
-    $("#myCarousel").carousel("prev");
+    $("#myCarousel").carousel("next");
 });
 $(".right").click(function () {
-    $("#myCarousel").carousel("next");
+    $("#myCarousel").carousel("prev");
 });

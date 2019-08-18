@@ -14,7 +14,6 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace FitnessGuru.Web.Areas.Administration.Controllers
 {
-    
     public class CategoriesController : AdministrationBaseController
     {
         private readonly ICategoriesService categoriesService;

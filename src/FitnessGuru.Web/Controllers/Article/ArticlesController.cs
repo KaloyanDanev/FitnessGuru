@@ -38,7 +38,7 @@ namespace FitnessGuru.Web.Controllers.Article
             {
                 return this.View(input);
             }
-            var id = await this.articlesService.Create(input.Title, input.ArticleDescription, input.Content, input.ImgUrl,input.CategoryId);
+            var id = await this.articlesService.Create(input.Title, input.ArticleDescription, input.Content, input.ImgUrl, input.CategoryId);
             return RedirectToAction("Details", new { id = id });
         }
 
