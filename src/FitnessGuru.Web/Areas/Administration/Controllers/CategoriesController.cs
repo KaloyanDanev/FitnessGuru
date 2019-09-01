@@ -10,6 +10,7 @@ using FitnessGuru.Services.DataServices;
 using FitnessGuru.Services.DataServices.Articles;
 using FitnessGuru.Web.Areas.Administration.Models.Categories;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FitnessGuru.Web.Areas.Administration.Controllers
@@ -26,6 +27,7 @@ namespace FitnessGuru.Web.Areas.Administration.Controllers
             this.categories = categories;
         }
 
+        [Authorize]
         public IActionResult Index()
         {
             var categories = categoriesService
@@ -35,6 +37,7 @@ namespace FitnessGuru.Web.Areas.Administration.Controllers
             return this.View(categories);
         }
 
+        [Authorize]
         public IActionResult Create() => this.View();
 
         [HttpPost]

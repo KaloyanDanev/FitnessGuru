@@ -23,6 +23,7 @@ using FitnessGuru.Models.Articles;
 using FitnessGuru.Models.Store;
 using FitnessGuru.Services.DataServices.Articles;
 using FitnessGuru.Services.DataServices.Store;
+using FitnessGuru.Web.Areas.Administration;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.Facebook;
 
@@ -67,7 +68,6 @@ namespace FitnessGuru.Web
             services.AddScoped<ICategoriesService, CategoriesService>();
             services.AddScoped<IProductCategoriesService, ProductCategoriesService>();
             services.AddScoped<IStoreService, StoreService>();
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

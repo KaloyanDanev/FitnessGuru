@@ -46,6 +46,6 @@ namespace FitnessGuru.Web.Controllers.Article
         {
             var article = this.articlesService.GetArticleById<ArticleDetailsViewModel>(id);
             return this.View(article);
-        }     
+        }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using FitnessGuru.Services.DataServices.Articles;
 using FitnessGuru.Services.DataServices.Store;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using X.PagedList;
 
@@ -24,7 +25,7 @@ namespace FitnessGuru.Web.Controllers
             this.productCategoriesService = productCategoriesService;
             this.storeService = storeService;
         }
-
+       
         public IActionResult ArticlesCategory(int id, int? page)
         {
             var articlesInCategory = this.articlesService.GetAllByCategory(id).ToList();
